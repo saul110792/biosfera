@@ -1,0 +1,15 @@
+# Blueprint de Render: sitio estático construido con Vite
+services:
+  - type: web
+    name: biosfera
+    runtime: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+    # SPA: cualquier ruta que no sea un archivo existente se sirve con index.html (React Router)
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

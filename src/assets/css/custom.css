@@ -1,0 +1,57 @@
+/* Estilos propios de Biosfera que no existen en la plantilla original */
+
+.bio_whatsapp_btn {
+  position: fixed;
+  right: 20px;
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px 12px 14px;
+  border-radius: 50px;
+  background-color: #25d366;
+  color: #fff;
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 20%);
+  transition: transform 0.3s ease;
+}
+
+.bio_whatsapp_btn:hover {
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 575px) {
+  .bio_whatsapp_btn {
+    padding: 14px;
+  }
+
+  .bio_whatsapp_btn span {
+    display: none;
+  }
+}
+
+/* Bloque de imagen con el mismo formato que el bloque de video, sin botón de reproducción */
+.bio_image_block {
+  cursor: default;
+}
+
+/* Lista de zonas de servicio */
+.bio_zone_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bio_zone_list li {
+  padding: 6px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  color: var(--heading-color);
+}
