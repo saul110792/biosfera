@@ -14,6 +14,8 @@ import BlogDetail from './pages/BlogDetail';
 import Contact from './pages/Contact';
 import Faq from './pages/Faq';
 import NotFound from './pages/NotFound';
+import HomeStyle2 from './pages/styles/HomeStyle2';
+import HomeStyle3 from './pages/styles/HomeStyle3';
 
 export default function App() {
   const { pathname } = useLocation();
@@ -47,6 +49,9 @@ export default function App() {
       <Route element={<MainLayout headerVariant="cs_color_1" footerVariant="cs_color_2" />}>
         <Route path="/servicios/:serviceId" element={<ServiceDetail />} />
       </Route>
+      {/* Propuestas alternativas de página principal para que el cliente compare */}
+      <Route path="/style2" element={<HomeStyle2 />} />
+      <Route path="/style3" element={<HomeStyle3 />} />
     </Routes>
   );
 }
