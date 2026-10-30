@@ -144,6 +144,11 @@
   color: #fff;
 }
 
+.s2_logo_mark .bio_logo_mark {
+  width: 24px;
+  height: 24px;
+}
+
 .s2_logo_light .s2_logo_mark {
   background: var(--s2-accent);
   color: var(--s2-ink);

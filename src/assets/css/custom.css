@@ -1,5 +1,162 @@
 /* Estilos propios de Biosfera que no existen en la plantilla original */
 
+/* Logo provisional: hoja del favicon (como máscara, toma el color del texto) + nombre */
+.bio_logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.bio_logo_light {
+  color: #fff;
+}
+
+.bio_logo_dark {
+  color: var(--heading-color);
+}
+
+.bio_logo_mark {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background-color: currentColor;
+  -webkit-mask: url(/assets/img/favicon.png) center / contain no-repeat;
+  mask: url(/assets/img/favicon.png) center / contain no-repeat;
+}
+
+.bio_logo_lg {
+  font-size: 32px;
+}
+
+.bio_logo_lg .bio_logo_mark {
+  width: 46px;
+  height: 46px;
+}
+
+@media (max-width: 575px) {
+  .bio_logo {
+    font-size: 23px;
+    gap: 8px;
+  }
+
+  .bio_logo_mark {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Contraste del encabezado transparente sobre fotos claras */
+.cs_site_header.cs_style_1:not(.cs_color_1):not(.cs_sticky_active) {
+  background: linear-gradient(180deg, rgb(24 33 23 / 72%) 0%, rgb(24 33 23 / 38%) 65%, rgb(24 33 23 / 0%) 100%);
+}
+
+.cs_site_header.cs_style_1:not(.cs_color_1) .cs_nav_list > li > a,
+.cs_site_header.cs_style_1:not(.cs_color_1) .bio_logo {
+  text-shadow: 0 1px 10px rgb(0 0 0 / 35%);
+}
+
+/* Oscurecido de las fotos de portada y de los encabezados de página */
+.cs_hero.cs_style_1 .cs_slide {
+  position: relative;
+}
+
+.cs_hero.cs_style_1 .cs_slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(24 33 23 / 70%) 0%, rgb(24 33 23 / 35%) 55%, rgb(24 33 23 / 20%) 100%);
+}
+
+.cs_page_heading.cs_style_1 {
+  position: relative;
+  isolation: isolate;
+}
+
+.cs_page_heading.cs_style_1::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgb(24 33 23 / 60%) 0%, rgb(24 33 23 / 30%) 45%, rgb(24 33 23 / 78%) 100%);
+}
+
+.cs_page_heading.cs_style_1 .breadcrumb {
+  --bs-breadcrumb-divider-color: rgb(255 255 255 / 70%);
+}
+
+.cs_page_heading.cs_style_1 .breadcrumb-item,
+.cs_page_heading.cs_style_1 .breadcrumb-item a {
+  opacity: 0.92;
+  text-shadow: 0 1px 8px rgb(0 0 0 / 45%);
+}
+
+/* Banners de llamado a la acción: oscurecido para que el texto se lea con cualquier foto */
+.cs_cta.cs_style_1 {
+  position: relative;
+  isolation: isolate;
+}
+
+.cs_cta.cs_style_1::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, rgb(24 33 23 / 82%) 0%, rgb(24 33 23 / 60%) 55%, rgb(24 33 23 / 40%) 100%);
+}
+
+/* En la variante con el texto a la derecha, el lado oscuro va a la derecha */
+.cs_cta.cs_style_1.cs_type_1::before {
+  background: linear-gradient(270deg, rgb(24 33 23 / 82%) 0%, rgb(24 33 23 / 60%) 55%, rgb(24 33 23 / 40%) 100%);
+}
+
+/* Tarjeta grande antes del footer: oscurecido inferior detrás del título */
+.cs_half_bg .cs_card.cs_style_1 {
+  isolation: isolate;
+}
+
+.cs_half_bg .cs_card.cs_style_1::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgb(24 33 23 / 20%) 0%, rgb(24 33 23 / 35%) 45%, rgb(24 33 23 / 80%) 100%);
+}
+
+@media (max-width: 991px) {
+  .cs_cta.cs_style_1::before,
+  .cs_cta.cs_style_1.cs_type_1::before {
+    background: rgb(24 33 23 / 68%);
+  }
+}
+
+/* Títulos grandes en celular: palabras largas como "CONTROLAMOS" o "INSTITUCIONES" no caben a 48px */
+@media (max-width: 575px) {
+  .cs_fs_80 {
+    font-size: clamp(30px, 10vw, 44px);
+    overflow-wrap: break-word;
+  }
+}
+
+/* Texto descriptivo junto a un título de sección: que no se salga del contenedor */
+.bio_heading_note {
+  max-width: 400px;
+  text-align: right;
+}
+
+@media (max-width: 991px) {
+  .bio_heading_note {
+    max-width: none;
+    text-align: left;
+  }
+}
+
 .bio_whatsapp_btn {
   position: fixed;
   right: 20px;
@@ -37,6 +194,80 @@
 /* Bloque de imagen con el mismo formato que el bloque de video, sin botón de reproducción */
 .bio_image_block {
   cursor: default;
+}
+
+/* Etiqueta sobre tarjetas (promociones) */
+.cs_card.cs_style_2 {
+  position: relative;
+}
+
+.bio_card_badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 3;
+  padding: 6px 14px;
+  border-radius: 50px;
+  background: var(--white-color);
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* Tarjetas de servicio: misma proporción horizontal (3:2) sin importar el tamaño de la foto */
+.cs_card.cs_style_2 .cs_card_thumb img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+/* Degradado inferior permanente para que el título y la descripción se lean en fotos claras */
+.cs_card.cs_style_2 .cs_card_thumb::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgb(24 33 23 / 0%) 25%, rgb(24 33 23 / 55%) 55%, rgb(24 33 23 / 90%) 100%);
+  pointer-events: none;
+}
+
+/* Tarjetas de promociones con la misma proporción de imagen */
+.bio_promo .cs_card.cs_style_2 .cs_card_thumb img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+/* Títulos largos ("CUCARACHAS", "VETERINARIA") en la tarjeta activa del inicio */
+.cs_card_1_group .cs_card.cs_style_1.active .cs_card_title {
+  font-size: clamp(28px, 3.6vw, 56px);
+  overflow-wrap: anywhere;
+}
+
+/* Franja del catálogo en la página de servicios */
+.bio_catalog {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 32px 40px;
+  border-radius: 20px;
+  background: var(--gray-color);
+}
+
+.bio_catalog p {
+  margin: 0;
+  max-width: 640px;
+  color: var(--heading-color);
+}
+
+@media (max-width: 575px) {
+  .bio_catalog {
+    padding: 24px;
+  }
 }
 
 /* Lista de zonas de servicio */

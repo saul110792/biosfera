@@ -8,7 +8,7 @@ import './style2.css';
 const nav = [
   ['Servicios', '#servicios'],
   ['Cómo trabajamos', '#proceso'],
-  ['Espacios', '#espacios'],
+  ['Sectores', '#espacios'],
   ['Preguntas', '#preguntas'],
 ];
 
@@ -22,7 +22,9 @@ export default function HomeStyle2() {
       <header className="s2_header">
         <div className="s2_container s2_header_in">
           <Link to="/style2" className="s2_logo">
-            <span className="s2_logo_mark">B</span>
+            <span className="s2_logo_mark">
+              <span className="bio_logo_mark" aria-hidden="true"></span>
+            </span>
             Biosfera
           </Link>
           <nav className={`s2_nav ${menuOpen ? 's2_nav_open' : ''}`}>
@@ -45,36 +47,35 @@ export default function HomeStyle2() {
       <section className="s2_hero">
         <div className="s2_container s2_hero_in">
           <div className="s2_hero_text">
-            <p className="s2_eyebrow">Control de plagas · {c.business.coverage}</p>
+            <p className="s2_eyebrow">Manejo de fauna nociva · {c.business.coverage}</p>
             <h1>
-              Tu casa y tu negocio <em>libres de plagas</em>
+              Manejo de fauna nociva <em>responsable</em> para tu casa y tu negocio
             </h1>
             <p className="s2_lead">
-              Fumigamos y sanitizamos casas, jardines, bodegas y negocios. Salimos desde Pantitlán a cualquier zona de la CDMX y el Estado de
-              México.
+              Manejo Integrado de Plagas y desinfección con métodos físicos primero y el mínimo uso de químicos, seguro para niños, adultos mayores y mascotas.
             </p>
             <div className="s2_hero_btns">
               <a className="s2_btn" href={c.whatsapp} target="_blank" rel="noopener noreferrer">
                 <LucideIcon name="messageCircle" size={20} />
-                Cotizar por WhatsApp
+                Solicitar cotización
               </a>
               <a className="s2_btn s2_btn_ghost" href="#servicios">
                 Ver servicios
               </a>
             </div>
             <ul className="s2_checks">
-              <li>Diagnóstico antes de aplicar</li>
-              <li>Indicaciones para niños y mascotas</li>
-              <li>Servicio a domicilio</li>
+              <li>Métodos físicos primero</li>
+              <li>Producto inoloro e incoloro</li>
+              <li>Reporte técnico y constancia</li>
             </ul>
           </div>
           <div className="s2_hero_media">
-            <img src="/assets/img/hero_bg_2.jpg" alt="Área verde tratada por Biosfera" />
+            <img src="/assets/img/bio/hero-porche.jpg" alt="Área verde tratada por Biosfera" />
             <div className="s2_badge">
-              <LucideIcon name="phone" size={20} />
+              <LucideIcon name="leaf" size={22} />
               <div>
-                <strong>Desde Pantitlán</strong>
-                <span>a toda la CDMX y Edomex</span>
+                <strong>{c.business.experience}</strong>
+                <span>de experiencia familiar</span>
               </div>
             </div>
           </div>
@@ -96,7 +97,7 @@ export default function HomeStyle2() {
         <div className="s2_container">
           <div className="s2_heading">
             <p className="s2_eyebrow">Servicios</p>
-            <h2>Soluciones para cada espacio</h2>
+            <h2>Especies que controlamos</h2>
           </div>
           <div className="s2_services">
             {c.services.map((service) => (
@@ -135,8 +136,8 @@ export default function HomeStyle2() {
         <div className="s2_container s2_spaces_wrap">
           <div className="s2_heading s2_heading_left">
             <p className="s2_eyebrow">Espacios</p>
-            <h2>De un departamento a una nave industrial</h2>
-            <p className="s2_lead">Cada lugar tiene plagas y riesgos distintos. Adaptamos el tratamiento y la frecuencia a tu espacio.</p>
+            <h2>Hogares, negocios e instituciones</h2>
+            <p className="s2_lead">Casas, condominios, restaurantes, oficinas, consultorios, escuelas, pequeñas industrias y división veterinaria: adaptamos el plan a cada sector.</p>
           </div>
           <div className="s2_spaces">
             {c.spaces.map((space) => (
@@ -192,8 +193,8 @@ export default function HomeStyle2() {
       <section className="s2_cta">
         <div className="s2_container s2_cta_in">
           <div>
-            <h2>¿Viste una plaga? No esperes a que crezca.</h2>
-            <p>Envíanos fotos por WhatsApp y te damos una cotización.</p>
+            <h2>¿Necesitas asesoría? Te ayudamos.</h2>
+            <p>Cuéntanos qué observas y te enviamos una cotización a la medida.</p>
           </div>
           <a className="s2_btn s2_btn_light" href={c.whatsapp} target="_blank" rel="noopener noreferrer">
             Escríbenos ahora
@@ -205,10 +206,12 @@ export default function HomeStyle2() {
         <div className="s2_container s2_footer_in">
           <div>
             <Link to="/style2" className="s2_logo s2_logo_light">
-              <span className="s2_logo_mark">B</span>
+              <span className="s2_logo_mark">
+              <span className="bio_logo_mark" aria-hidden="true"></span>
+            </span>
               Biosfera
             </Link>
-            <p>Control de plagas, fumigación y sanitización en {c.business.coverage}.</p>
+            <p>Manejo de fauna nociva y desinfección en la {c.business.coverage}, {c.business.focusArea}.</p>
           </div>
           <div>
             <h4>Contacto</h4>

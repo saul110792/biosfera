@@ -6,7 +6,7 @@ import PageHeading from '../components/PageHeading';
 import BlogSidebar from '../components/BlogSidebar';
 import DreamCard from '../components/DreamCard';
 
-const heading = { backgroundImage: '/assets/img/about_heading_bg.jpg', title: 'BLOG', breadcrumbs: breadcrumbs('Blog') };
+const heading = { backgroundImage: '/assets/img/bio/perro-jardin.jpg', title: 'BLOG', breadcrumbs: breadcrumbs('Blog') };
 
 export default function Blog() {
   usePageTitle('Blog');

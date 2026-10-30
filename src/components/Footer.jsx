@@ -1,11 +1,14 @@
 import { Link } from 'react-router-dom';
 import { footerData } from '../data/layout';
 import { whatsappLink } from '../data/business';
+import SmartLink from './SmartLink';
+import BrandLogo from './BrandLogo';
 import { ArrowUpRight } from './Icons';
 
 // variant: '' (inicio y servicios), 'cs_color_1' (páginas internas) o 'cs_color_2' (detalle de servicio)
 export default function Footer({ variant = '' }) {
-  const logo = variant === 'cs_color_1' ? footerData.logoAlt : footerData.logo;
+  // El footer cs_color_1 tiene fondo oscuro; los demás, fondo claro
+  const logoTone = variant === 'cs_color_1' ? 'light' : 'dark';
 
   // Sin backend: la duda se abre como mensaje de WhatsApp
   const sendToWhatsapp = (e) => {
@@ -22,7 +25,7 @@ export default function Footer({ variant = '' }) {
           <div className="cs_footer_col">
             <div className="cs_footer_widget">
               <div className="cs_text_widget">
-                <img src={logo} alt="Logo" className="wow zoomIn" data-aos="zoom-in" />
+                <BrandLogo tone={logoTone} className="bio_logo_lg" />
                 <p dangerouslySetInnerHTML={{ __html: footerData.newsletterText }} />
               </div>
             </div>
@@ -42,7 +45,7 @@ export default function Footer({ variant = '' }) {
                 <ul className="cs_footer_widget_menu cs_mp_0">
                   {menu.links.map((link, i) => (
                     <li key={i}>
-                      <Link to={link.url}>{link.label}</Link>
+                      <SmartLink to={link.url}>{link.label}</SmartLink>
                     </li>
                   ))}
                 </ul>
@@ -58,7 +61,7 @@ export default function Footer({ variant = '' }) {
             <ul className="cs_footer_links cs_mp_0">
               {footerData.bottomLinks.map((link, i) => (
                 <li key={i}>
-                  <Link to={link.url}>{link.label}</Link>
+                  <SmartLink to={link.url}>{link.label}</SmartLink>
                 </li>
               ))}
             </ul>

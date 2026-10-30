@@ -1,11 +1,13 @@
-/* Propuesta 3: oscuro y contundente. Todo va bajo .s3 para no afectar al resto del sitio. */
+/* Propuesta 3: cálida y artesanal (crema, verde olivo y serifa). Todo va bajo .s3 para no afectar al resto del sitio. */
 .s3 {
-  --s3-bg: #0e1411;
-  --s3-surface: #17201b;
-  --s3-line: rgb(238 243 238 / 14%);
-  --s3-ink: #eef3ee;
-  --s3-muted: #9fb0a5;
-  --s3-accent: #c6f432;
+  --s3-bg: #f5f0e6;
+  --s3-surface: #ece4d4;
+  --s3-line: rgb(47 58 43 / 16%);
+  --s3-ink: #2f3a2b;
+  --s3-muted: #6c7363;
+  --s3-accent: #5e7a3a;
+  --s3-on-accent: #f5f0e6;
+  --s3-serif: 'Fraunces', Georgia, serif;
   background: var(--s3-bg);
   color: var(--s3-ink);
   font-family: 'DM Sans', sans-serif;
@@ -16,12 +18,11 @@
 .s3 h1,
 .s3 h2,
 .s3 h3 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--s3-serif);
   color: var(--s3-ink);
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
   margin: 0;
 }
 
@@ -48,7 +49,7 @@
   gap: 8px;
   padding: 16px 28px;
   background: var(--s3-accent);
-  color: var(--s3-bg);
+  color: var(--s3-on-accent);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -92,14 +93,19 @@
 }
 
 .s3_logo {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--s3-serif);
+  font-weight: 600;
   font-size: 24px;
   letter-spacing: 0.04em;
   color: var(--s3-ink);
 }
 
-.s3_logo span {
+.s3_logo_mark {
+  width: 30px;
+  height: 30px;
   color: var(--s3-accent);
 }
 
@@ -167,7 +173,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgb(14 20 17 / 55%) 0%, rgb(14 20 17 / 70%) 55%, var(--s3-bg) 100%);
+  background: linear-gradient(180deg, rgb(245 240 230 / 55%) 0%, rgb(245 240 230 / 86%) 55%, var(--s3-bg) 100%);
 }
 
 .s3_hero_in {
@@ -226,10 +232,9 @@
 
 .s3_facts dd {
   margin: 4px 0 0;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 800;
+  font-family: var(--s3-serif);
+  font-weight: 600;
   font-size: clamp(18px, 2.4vw, 28px);
-  text-transform: uppercase;
 }
 
 /* Cinta de plagas */
@@ -237,7 +242,7 @@
   overflow: hidden;
   padding-block: 18px;
   background: var(--s3-accent);
-  color: var(--s3-bg);
+  color: var(--s3-on-accent);
 }
 
 .s3_marquee_track {
@@ -248,10 +253,9 @@
 
 .s3_marquee span {
   padding-inline: 28px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 800;
+  font-family: var(--s3-serif);
+  font-weight: 600;
   font-size: 22px;
-  text-transform: uppercase;
   white-space: nowrap;
 }
 
@@ -329,8 +333,8 @@
 }
 
 .s3_service_num {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 800;
+  font-family: var(--s3-serif);
+  font-weight: 600;
   font-size: 28px;
   color: var(--s3-muted);
 }
@@ -433,8 +437,8 @@
 }
 
 .s3_steps li > span {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 800;
+  font-family: var(--s3-serif);
+  font-weight: 600;
   font-size: 48px;
   line-height: 1;
   color: var(--s3-accent);
@@ -490,12 +494,12 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 30%, rgb(14 20 17 / 92%) 100%);
+  background: linear-gradient(180deg, transparent 30%, rgb(40 50 36 / 90%) 100%);
   transition: background 0.3s ease;
 }
 
 .s3_space:hover::before {
-  background: linear-gradient(180deg, rgb(14 20 17 / 30%) 0%, rgb(14 20 17 / 96%) 100%);
+  background: linear-gradient(180deg, rgb(40 50 36 / 30%) 0%, rgb(40 50 36 / 94%) 100%);
 }
 
 .s3_space div {
@@ -508,7 +512,7 @@
   margin-bottom: 12px;
   padding: 3px 10px;
   background: var(--s3-accent);
-  color: var(--s3-bg);
+  color: var(--s3-on-accent);
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
@@ -516,12 +520,13 @@
 }
 
 .s3_space h3 {
+  color: #fff;
   font-size: 28px;
   margin-bottom: 10px;
 }
 
 .s3_space p {
-  color: var(--s3-muted);
+  color: rgb(255 255 255 / 82%);
   font-size: 15px;
 }
 
@@ -543,8 +548,8 @@
 }
 
 .s3_tips_grid span {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 800;
+  font-family: var(--s3-serif);
+  font-weight: 600;
   font-size: 56px;
   color: var(--s3-accent);
   line-height: 1;
@@ -574,11 +579,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 4px 28px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 800;
+  font-family: var(--s3-serif);
+  font-weight: 600;
   font-size: clamp(26px, 4.4vw, 56px);
   line-height: 1.25;
-  text-transform: uppercase;
 }
 
 .s3_zones span:nth-child(odd) {
@@ -597,7 +601,7 @@
 .s3_cta a {
   display: block;
   padding-block: 96px;
-  color: var(--s3-bg);
+  color: var(--s3-on-accent);
 }
 
 .s3_cta_small {
@@ -609,12 +613,11 @@
 
 .s3_cta_big {
   display: block;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 800;
+  font-family: var(--s3-serif);
+  font-weight: 600;
   font-size: clamp(38px, 12vw, 180px);
   line-height: 1;
-  text-transform: uppercase;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   transition: transform 0.3s ease;
 }
 

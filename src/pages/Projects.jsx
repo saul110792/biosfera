@@ -95,7 +95,7 @@ function SpacesSlider({ items }) {
 }
 
 export default function Projects() {
-  usePageTitle('Espacios que atendemos');
+  usePageTitle('Sectores que atendemos');
   const [first, featured, second, ...rest] = spaces;
 
   return (

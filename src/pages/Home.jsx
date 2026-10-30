@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <Hero data={homeData.hero} />
       <ValuesCard data={homeData.values} />
-      <Features data={homeData.features} />
+      <Features data={homeData.method} />
       <HowItWorks data={homeData.howItWorks} />
       <ServiceCards data={homeData.services} />
       <Testimonials data={homeData.tips} />

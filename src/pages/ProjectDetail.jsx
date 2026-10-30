@@ -38,7 +38,7 @@ function ServicesSlider({ items }) {
         <div className="cs_slider cs_style_1 cs_slider_gap_24">
           <div className="cs_section_heading cs_style_2 cs_color_1">
             <h2 className="cs_section_title cs_fs_80 mb-0">
-              SERVICIOS <br /> PARA ESTE <span>ESPACIO</span>
+              SERVICIOS <br /> PARA ESTE <span>SECTOR</span>
             </h2>
             <div className="cs_section_right">
               <h3 className="cs_brackets_title cs_normal cs_fs_16 mb-0">SERVICIOS</h3>
@@ -87,7 +87,7 @@ export default function ProjectDetail() {
 
   return (
     <>
-      <PageHeading data={{ backgroundImage: '/assets/img/project_heading_bg.jpg', title: space.title, breadcrumbs: breadcrumbs('Espacios') }} />
+      <PageHeading data={{ backgroundImage: '/assets/img/bio/restaurante.jpg', title: space.title, breadcrumbs: breadcrumbs('Sectores') }} />
       <section>
         <div className="container">
           <div className="cs_height_100 cs_height_lg_70"></div>
@@ -95,7 +95,7 @@ export default function ProjectDetail() {
             <div className="col-lg-7">
               <ProjectInfoList rows={spaceInfoRows(space)} className="cs_project_details_info" />
               <div className="cs_height_50 cs_height_lg_40"></div>
-              <ImageBlock className="cs_type_1" backgroundImage="/assets/img/video_block_bg_2.jpg" />
+              <ImageBlock className="cs_type_1" backgroundImage="/assets/img/bio/tecnico-interior.jpg" />
             </div>
             <div className="col-lg-5">
               <div className="cs_slider cs_style_1">

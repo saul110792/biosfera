@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import SmartLink from './SmartLink';
 import { dreamCardData } from '../data/pages';
 import { ArrowUpRight } from './Icons';
 
@@ -24,9 +25,9 @@ export default function DreamCard({ data = dreamCardData, bgColor = '' }) {
               dangerouslySetInnerHTML={{ __html: data.title }}
             />
           </div>
-          <Link to={data.buttonLink} className="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+          <SmartLink to={data.buttonLink} className="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
             <ArrowUpRight />
-          </Link>
+          </SmartLink>
         </div>
       </div>
     </section>

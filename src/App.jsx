@@ -8,7 +8,7 @@ import Services from './pages/Services';
 import ServiceDetail from './pages/ServiceDetail';
 import Projects from './pages/Projects';
 import ProjectDetail from './pages/ProjectDetail';
-import GalleryPage from './pages/GalleryPage';
+import Promotions from './pages/Promotions';
 import Blog from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
 import Contact from './pages/Contact';
@@ -37,9 +37,9 @@ export default function App() {
       </Route>
       <Route element={<MainLayout footerVariant="cs_color_1" />}>
         <Route path="/nosotros" element={<About />} />
-        <Route path="/espacios" element={<Projects />} />
-        <Route path="/espacios/:projectId" element={<ProjectDetail />} />
-        <Route path="/galeria" element={<GalleryPage />} />
+        <Route path="/sectores" element={<Projects />} />
+        <Route path="/sectores/:projectId" element={<ProjectDetail />} />
+        <Route path="/promociones" element={<Promotions />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:blogId" element={<BlogDetail />} />
         <Route path="/contacto" element={<Contact />} />

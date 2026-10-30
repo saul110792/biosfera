@@ -1,8 +1,8 @@
-// Zonas de servicio en CDMX y Edomex (útil para que la gente y los buscadores ubiquen la cobertura)
+// Zonas de servicio (útil para que la gente y los buscadores ubiquen la cobertura)
 export default function ZonesSection({ zones, className = 'cs_gray_bg' }) {
   const groups = [
-    ['CIUDAD DE MÉXICO', zones.cdmx],
-    ['ESTADO DE MÉXICO', zones.edomex],
+    ['CIUDAD DE MÉXICO · ENFOQUE EN EL ORIENTE', zones.cdmx],
+    ['ÁREA METROPOLITANA', zones.edomex],
   ];
 
   return (

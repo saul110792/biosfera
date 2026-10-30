@@ -1,24 +1,37 @@
-// Datos de contacto del negocio en un solo lugar.
-// PENDIENTE: los valores marcados deben reemplazarse con los datos reales antes de publicar.
+// Datos del negocio en un solo lugar (fuente: brief de proyecto de Ruth López, v2 oct 2026).
+// PENDIENTE: confirmar con Ruth que el teléfono y el correo pueden publicarse (en el brief el teléfono viene como personal).
 export const business = {
   name: 'Biosfera',
-  tagline: 'Control de plagas y fumigación',
-  baseZone: 'Pantitlán, Iztacalco, CDMX',
-  coverage: 'CDMX y Estado de México',
-  phone: '55 0000 0000', // PENDIENTE
-  whatsapp: '525500000000', // PENDIENTE: 52 + número a 10 dígitos, sin espacios
-  email: 'contacto@tudominio.com', // PENDIENTE
-  hours: 'Lunes a sábado, 8:00 a 19:00 h', // PENDIENTE: confirmar horario
-  mapSrc: 'https://www.google.com/maps?q=Pantitl%C3%A1n,+Iztacalco,+Ciudad+de+M%C3%A9xico&output=embed',
+  brandName: 'Biosfera Control',
+  tagline: 'Manejo de fauna nociva y desinfección',
+  coverage: 'CDMX y Área Metropolitana',
+  focusArea: 'con enfoque en el oriente de la Ciudad de México',
+  experience: 'Más de 20 años',
+  phone: '56 1609 0126',
+  whatsapp: '525616090126',
+  email: 'lopez.ruth.biosfera@gmail.com',
+  hours: '8:00 a 18:00 h',
+  catalogPdf: '', // PENDIENTE: ruta del PDF en /public (por ejemplo /catalogo-biosfera.pdf)
 };
 
-export const defaultWhatsappMessage = 'Hola Biosfera, quiero cotizar un servicio de control de plagas.';
+// PENDIENTE: URLs de los perfiles; mientras estén vacías se enlaza a la página principal de cada red
+export const socialLinks = [
+  { label: 'INSTAGRAM', url: '', fallback: 'https://www.instagram.com/' },
+  { label: 'FACEBOOK', url: '', fallback: 'https://www.facebook.com/' },
+  { label: 'TIKTOK', url: '', fallback: 'https://www.tiktok.com/' },
+].map((s) => ({ label: s.label, url: s.url || s.fallback }));
+
+export const defaultWhatsappMessage = 'Hola Biosfera, me gustaría solicitar una cotización o asesoría.';
 
 export const whatsappLink = (message = defaultWhatsappMessage) =>
   `https://wa.me/${business.whatsapp}?text=${encodeURIComponent(message)}`;
 
-// Zonas que se mencionan como referencia; el servicio llega a cualquier punto de CDMX y Edomex
+// Si aún no hay PDF, el botón de catálogo pide el catálogo por WhatsApp
+export const catalogLink = () =>
+  business.catalogPdf || whatsappLink('Hola Biosfera, ¿me pueden compartir su catálogo de servicios?');
+
+// Zonas de referencia: enfoque en el oriente de la CDMX, pero se atiende toda la ciudad y el Área Metropolitana
 export const serviceZones = {
-  cdmx: ['Iztacalco', 'Venustiano Carranza', 'Iztapalapa', 'Gustavo A. Madero', 'Benito Juárez', 'Coyoacán'],
+  cdmx: ['Iztacalco', 'Iztapalapa', 'Venustiano Carranza', 'Gustavo A. Madero', 'Tláhuac', 'Benito Juárez', 'Coyoacán'],
   edomex: ['Nezahualcóyotl', 'Los Reyes La Paz', 'Chimalhuacán', 'Ecatepec', 'Chalco', 'Texcoco'],
 };

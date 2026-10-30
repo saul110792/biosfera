@@ -1,73 +1,97 @@
-// Tipos de inmueble que atiende Biosfera (sección "Espacios", antes "Proyectos" en la plantilla).
-// PENDIENTE: confirmar las frecuencias sugeridas con Biosfera y cambiar las imágenes por fotos reales.
+// Sectores que atiende Biosfera, según el plan integral del brief v2.
+// PENDIENTE: confirmar las frecuencias sugeridas con Biosfera; las fotos son de banco (Unsplash).
 export const spaces = [
   {
-    slug: 'casas-y-departamentos',
-    title: 'CASAS Y DEPARTAMENTOS',
-    image: '/assets/img/project_thumb_10.jpg',
-    pests: 'CUCARACHAS, HORMIGAS, ARAÑAS',
-    service: 'FUMIGACIÓN DE CASAS',
+    slug: 'casas-y-condominios',
+    title: 'CASAS HABITACIÓN Y CONDOMINIOS',
+    image: '/assets/img/bio/cocina-blanca.jpg',
+    pests: 'CUCARACHAS, CHINCHES, ROEDORES',
+    service: 'MANEJO DE FAUNA NOCIVA',
     frequency: 'CADA 6 MESES',
-    serviceSlugs: ['fumigacion-de-casas', 'control-de-roedores', 'limpieza-y-sanitizacion'],
+    serviceSlugs: ['cucarachas', 'chinches', 'control-de-roedores'],
     description:
-      'Cocinas, baños y coladeras son los puntos más comunes de entrada y refugio. Una fumigación preventiva dos veces al año ayuda a mantener tu casa libre de plagas.',
-    outcomes: 'Revisión de cocina, baños y coladeras <br /> Indicaciones para niños y mascotas <br /> Recomendaciones de prevención',
+      'Cocinas, baños, recámaras y coladeras son los puntos más comunes de entrada y refugio. En condominios la plaga se mueve entre departamentos por ductos y áreas comunes, así que conviene un plan para todo el edificio.',
+    outcomes: 'Inspección de cocina, baños y recámaras <br /> Áreas comunes y cuartos de basura <br /> Seguro para niños, adultos mayores y mascotas',
   },
   {
-    slug: 'jardines-y-patios',
-    title: 'JARDINES Y PATIOS',
-    image: '/assets/img/project_thumb_11.jpg',
-    pests: 'MOSQUITOS, PULGAS, GARRAPATAS',
-    service: 'CONTROL EN ÁREAS VERDES',
-    frequency: 'TEMPORADA DE LLUVIAS',
-    serviceSlugs: ['control-de-plagas-en-jardines', 'control-de-roedores', 'fumigacion-de-casas'],
-    description:
-      'La humedad, la hojarasca y el agua estancada convierten jardines y patios en criaderos de mosquitos, pulgas y garrapatas, sobre todo de junio a septiembre. Tratamos pasto, macetas y perímetros para proteger a tu familia y a tus mascotas.',
-    outcomes: 'Menos mosquitos y pulgas <br /> Áreas verdes seguras para mascotas <br /> Focos de humedad identificados',
-  },
-  {
-    slug: 'bodegas-y-naves',
-    title: 'BODEGAS Y NAVES',
-    image: '/assets/img/project_thumb_12.jpg',
-    pests: 'ROEDORES, CUCARACHAS, AVES',
-    service: 'PROGRAMA DE CONTROL',
-    frequency: 'MENSUAL O BIMESTRAL',
-    serviceSlugs: ['fumigacion-de-bodegas', 'control-de-roedores', 'limpieza-y-sanitizacion'],
-    description:
-      'En bodegas y almacenes el control debe ser continuo: estaciones para roedores, tratamiento de insectos y revisiones periódicas para proteger la mercancía y estar preparados para revisiones sanitarias.',
-    outcomes: 'Mercancía protegida <br /> Reporte de cada visita <br /> Visitas sin frenar la operación',
-  },
-  {
-    slug: 'negocios-y-restaurantes',
-    title: 'NEGOCIOS Y RESTAURANTES',
-    image: '/assets/img/project_thumb_13.jpg',
+    slug: 'restaurantes',
+    title: 'RESTAURANTES Y CAFETERÍAS',
+    image: '/assets/img/bio/cocina-restaurante.jpg',
     pests: 'CUCARACHAS, ROEDORES, MOSCAS',
-    service: 'PROGRAMA PARA NEGOCIOS',
+    service: 'CONTRATO PERIÓDICO',
     frequency: 'MENSUAL',
-    serviceSlugs: ['negocios-y-comercios', 'control-de-roedores', 'limpieza-y-sanitizacion'],
+    serviceSlugs: ['cucarachas', 'control-de-roedores', 'desinfeccion'],
     description:
-      'Cocinas, almacenes de alimentos y áreas de atención al cliente necesitan un programa constante. Trabajamos fuera de tu horario de servicio y dejamos registro de cada visita.',
-    outcomes: 'Programa adaptado a tu giro <br /> Visitas fuera de horario <br /> Reporte de servicio',
+      'Cocinas, almacenes de alimentos y áreas de atención al cliente necesitan un programa constante. Trabajamos fuera de tu horario de servicio y entregamos constancia para tus verificaciones sanitarias.',
+    outcomes: 'Reporte técnico de cada visita <br /> Constancia de servicio <br /> Visitas fuera de horario',
   },
   {
-    slug: 'condominios-y-oficinas',
-    title: 'CONDOMINIOS Y OFICINAS',
-    image: '/assets/img/project_thumb_9.jpg',
-    pests: 'CUCARACHAS, ROEDORES, CHINCHES',
-    service: 'FUMIGACIÓN Y SANITIZACIÓN',
-    frequency: 'CADA 3 A 6 MESES',
-    serviceSlugs: ['fumigacion-de-casas', 'control-de-roedores', 'limpieza-y-sanitizacion'],
+    slug: 'oficinas',
+    title: 'OFICINAS',
+    image: '/assets/img/bio/oficina.jpg',
+    pests: 'CUCARACHAS, ROEDORES, HORMIGAS',
+    service: 'PREVENCIÓN Y DESINFECCIÓN',
+    frequency: 'CADA 3 MESES',
+    serviceSlugs: ['cucarachas', 'desinfeccion', 'control-de-roedores'],
     description:
-      'En condominios la plaga se mueve entre departamentos por ductos, drenaje y áreas comunes, así que conviene tratar todo el edificio. En oficinas, una sanitización periódica complementa el control de plagas.',
-    outcomes: 'Áreas comunes y cuartos de basura <br /> Coordinación con la administración <br /> Sanitización de oficinas',
+      'Comedores, áreas de café, archivos y sanitarios son los puntos a vigilar en una oficina. Combinamos prevención y desinfección con visitas en horarios que no interrumpen el trabajo.',
+    outcomes: 'Comedores y áreas de café <br /> Desinfección de áreas comunes <br /> Servicio fuera de horario laboral',
+  },
+  {
+    slug: 'consultorios',
+    title: 'CONSULTORIOS Y CLÍNICAS',
+    image: '/assets/img/bio/consultorio.jpg',
+    pests: 'CUCARACHAS, HORMIGAS, ROEDORES',
+    service: 'MANEJO Y DESINFECCIÓN',
+    frequency: 'MENSUAL O BIMESTRAL',
+    serviceSlugs: ['desinfeccion', 'cucarachas', 'control-de-roedores'],
+    description:
+      'En consultorios la higiene es parte de la atención. Combinamos manejo de fauna nociva y desinfección de espacios con productos poco invasivos, sin interrumpir las consultas.',
+    outcomes: 'Desinfección de áreas de atención <br /> Constancia de servicio <br /> Horarios sin interrumpir consultas',
+  },
+  {
+    slug: 'escuelas',
+    title: 'ESCUELAS',
+    image: '/assets/img/bio/escuela.jpg',
+    pests: 'CUCARACHAS, ROEDORES, HORMIGAS',
+    service: 'CONTROL PREVENTIVO',
+    frequency: 'CADA 3 MESES',
+    serviceSlugs: ['cucarachas', 'control-de-roedores', 'desinfeccion'],
+    description:
+      'Aulas, comedores y áreas comunes reciben a muchas personas cada día. Programamos los servicios en fines de semana o vacaciones para que alumnos y personal estén seguros.',
+    outcomes: 'Servicio en días sin clases <br /> Comedores y áreas comunes <br /> Desinfección de aulas',
+  },
+  {
+    slug: 'pequenas-industrias',
+    title: 'PEQUEÑAS INDUSTRIAS',
+    image: '/assets/img/bio/nave.jpg',
+    pests: 'ROEDORES, CUCARACHAS, INSECTOS DE LA MADERA',
+    service: 'MANEJO INTEGRADO',
+    frequency: 'MENSUAL O BIMESTRAL',
+    serviceSlugs: ['control-de-roedores', 'cucarachas', 'insectos-de-la-madera'],
+    description:
+      'En bodegas y pequeñas industrias el control debe ser continuo: monitoreo con estaciones para roedores, revisión de tarimas y estructuras de madera e inspecciones periódicas para proteger la mercancía.',
+    outcomes: 'Monitoreo con estaciones cerradas <br /> Revisión de tarimas y madera <br /> Visitas sin frenar la operación',
+  },
+  {
+    slug: 'division-veterinaria',
+    title: 'DIVISIÓN VETERINARIA',
+    image: '/assets/img/bio/acuario.jpg',
+    pests: 'PULGAS, GARRAPATAS, MOSCAS',
+    service: 'CONSULTORIOS, ACUARIOS Y RANCHOS',
+    frequency: 'SEGÚN CADA ESPACIO',
+    serviceSlugs: ['division-veterinaria', 'control-de-roedores', 'desinfeccion'],
+    description:
+      'Consultorios veterinarios, acuarios y ranchos requieren cuidar a los animales tanto como controlar la plaga. Planeamos cada servicio según las especies del lugar y aplicamos lejos de peceras, comederos y bebederos.',
+    outcomes: 'Consultorios veterinarios <br /> Acuarios <br /> Ranchos, corrales y bodegas de alimento',
   },
 ];
 
 export const getSpace = (slug) => spaces.find((s) => s.slug === slug);
 
-export const spaceUrl = (space) => `/espacios/${space.slug}`;
+export const spaceUrl = (space) => `/sectores/${space.slug}`;
 
-// Filas de datos que se muestran en las tarjetas de espacios
+// Filas de datos que se muestran en las tarjetas de sectores
 export const spaceInfoRows = (space) => [
   ['PLAGAS FRECUENTES', space.pests],
   ['SERVICIO', space.service],

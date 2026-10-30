@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 import { headerData } from '../data/layout';
 import { whatsappLink } from '../data/business';
 import { LucideIcon, SearchIcon } from './Icons';
+import BrandLogo from './BrandLogo';
 
 // variant 'cs_color_1': encabezado claro con logo oscuro (detalle de servicio, sin imagen de fondo)
 export default function Header({ variant = '' }) {
-  const logo = variant === 'cs_color_1' ? headerData.logoDark : headerData.logo;
+  const logoTone = variant === 'cs_color_1' ? 'dark' : 'light';
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdowns, setOpenDropdowns] = useState([]);
   const [stickyClass, setStickyClass] = useState('');
@@ -29,8 +30,8 @@ export default function Header({ variant = '' }) {
           <div className="container">
             <div className="cs_main_header_in">
               <div className="cs_main_header_left">
-                <Link className="cs_site_branding" to={headerData.logoUrl}>
-                  <img src={logo} alt="Logo" />
+                <Link className="cs_site_branding" to={headerData.logoUrl} aria-label="Biosfera, ir al inicio">
+                  <BrandLogo tone={logoTone} />
                 </Link>
               </div>
               <div className="cs_main_header_center">

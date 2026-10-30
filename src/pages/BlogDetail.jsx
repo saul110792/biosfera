@@ -17,7 +17,7 @@ export default function BlogDetail() {
 
   return (
     <>
-      <PageHeading data={{ backgroundImage: '/assets/img/about_heading_bg.jpg', title: post.title, breadcrumbs: breadcrumbs('Blog') }} />
+      <PageHeading data={{ backgroundImage: '/assets/img/bio/perro-jardin.jpg', title: post.title, breadcrumbs: breadcrumbs('Blog') }} />
       <section>
         <div className="cs_height_100 cs_height_lg_70"></div>
         <div className="container">

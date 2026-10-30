@@ -1,13 +1,66 @@
 // Artículos informativos. El slug forma la URL /blog/:slug y el contenido (body) es HTML.
 export const blogPosts = [
   {
-    slug: 'como-preparar-tu-casa-para-una-fumigacion',
-    image: '/assets/img/post_1.jpg',
+    slug: 'control-quimico-tradicional-vs-manejo-integrado',
+    image: '/assets/img/bio/tecnico-sendero.jpg',
+    date: '27 Oct 2026',
+    category: 'Manejo integrado',
+    title: 'Control químico tradicional vs. Manejo Integrado de Plagas',
+    excerpt:
+      'Rociar producto en toda la casa no es la única forma de controlar una plaga. Te explicamos en qué se diferencia el Manejo Integrado de Plagas y por qué cuida mejor tu salud y el ambiente.',
+    body: `
+      <p>Durante mucho tiempo, controlar una plaga significó aplicar producto químico en todo el espacio, con fuerte olor y a veces cada mes aunque no hubiera problema. Hoy existe una forma más responsable de trabajar: el Manejo Integrado de Plagas (MIP).</p>
+      <h3>El enfoque tradicional</h3>
+      <ul>
+        <li>Aplicación general en todo el inmueble, haya o no presencia de la plaga.</li>
+        <li>Mayor cantidad de producto y, muchas veces, olor fuerte y residuos.</li>
+        <li>Ataca a los insectos visibles, pero no las causas que los atraen.</li>
+        <li>Si las condiciones no cambian, la plaga regresa.</li>
+      </ul>
+      <h3>El Manejo Integrado de Plagas</h3>
+      <ul>
+        <li><strong>Inspección y diagnóstico:</strong> primero se identifica la especie, sus refugios y por dónde entra.</li>
+        <li><strong>Métodos físicos:</strong> sellado de accesos, rejillas, trampas, orden y limpieza de zonas críticas.</li>
+        <li><strong>Aplicación mínima y dirigida:</strong> el químico es el último recurso y se usa solo en los puntos necesarios.</li>
+        <li><strong>Monitoreo y prevención:</strong> seguimiento para confirmar el resultado y recomendaciones para evitar que vuelva.</li>
+      </ul>
+      <blockquote>Usar menos producto no significa un control más débil: significa atacar las causas, no solo los síntomas. <small>Equipo Biosfera Control</small></blockquote>
+      <h3>¿Por qué importa?</h3>
+      <p>Con el MIP se reduce la exposición de niños, adultos mayores y mascotas a productos químicos, se protege a las especies que no son plaga y el control dura más, porque se corrigen las condiciones que permitían la infestación.</p>
+    `,
+  },
+  {
+    slug: 'mitos-sobre-las-plagas',
+    image: '/assets/img/bio/tecnico-jardin.jpg',
+    date: '24 Oct 2026',
+    category: 'Prevención',
+    title: 'Seis mitos sobre las plagas que debes dejar de creer',
+    excerpt:
+      '¿Las cucarachas solo aparecen en casas sucias? ¿Entre más producto, mejor? Desmentimos las creencias más comunes sobre el control de plagas.',
+    body: `
+      <p>Alrededor de las plagas circulan muchas ideas que, además de no ayudar, pueden hacer que el problema crezca o que te expongas a productos sin necesidad.</p>
+      <h3>1. "Si no las veo, no las tengo"</h3>
+      <p>Cucarachas, chinches y roedores son principalmente nocturnos y pasan el día escondidos. Excremento, manchas en la ropa de cama o marcas de roeduras suelen aparecer antes que el insecto o el animal.</p>
+      <h3>2. "Las cucarachas solo están en casas sucias"</h3>
+      <p>La limpieza ayuda mucho, pero la cucaracha americana llega por el drenaje, coladeras y registros, incluso a cocinas impecables. Sellar accesos es tan importante como limpiar.</p>
+      <h3>3. "Entre más producto, mejor"</h3>
+      <p>Aplicar de más no mejora el resultado: aumenta la exposición de tu familia y tus mascotas y puede favorecer que la plaga se vuelva resistente. Lo eficaz es aplicar poco y en el lugar correcto.</p>
+      <h3>4. "Los remedios caseros son suficientes"</h3>
+      <p>Algunos remedios ahuyentan temporalmente a ciertos insectos, pero no llegan a los nidos ni corrigen la causa. Si la plaga persiste, conviene una inspección profesional.</p>
+      <h3>5. "Con un solo servicio queda resuelto para siempre"</h3>
+      <p>Las plagas pueden volver a entrar con la mercancía, el drenaje o una mudanza. La prevención y el seguimiento son parte del control.</p>
+      <h3>6. "Si no huele fuerte, no funciona"</h3>
+      <p>El olor no indica eficacia. En Biosfera Control usamos un insecticida inoloro e incoloro que no mancha superficies, para que vuelvas a tu rutina sin molestias.</p>
+    `,
+  },
+  {
+    slug: 'como-preparar-tu-casa-antes-del-servicio',
+    image: '/assets/img/bio/cocina-hogar.jpg',
     date: '20 Oct 2026',
     category: 'Prevención',
-    title: 'Cómo preparar tu casa antes de una fumigación',
+    title: 'Cómo preparar tu casa antes del servicio',
     excerpt:
-      'Guardar alimentos, proteger a tus mascotas y despejar las zonas a tratar hace que la fumigación sea más segura y efectiva. Te dejamos una lista práctica para antes y después del servicio.',
+      'Guardar alimentos, proteger a tus mascotas y despejar las zonas a tratar hace que el servicio sea más seguro y efectivo. Te dejamos una lista práctica para antes y después del servicio.',
     body: `
       <p>Una buena preparación hace que el producto llegue a donde se esconden las plagas y reduce riesgos para tu familia. Estos son los pasos que recomendamos antes de que llegue el técnico.</p>
       <h3>Antes del servicio</h3>
@@ -30,7 +83,7 @@ export const blogPosts = [
   },
   {
     slug: 'plagas-en-temporada-de-lluvias-cdmx',
-    image: '/assets/img/post_2.jpg',
+    image: '/assets/img/bio/lluvia.jpg',
     date: '14 Oct 2026',
     category: 'Temporada de lluvias',
     title: 'Plagas más comunes en la CDMX en temporada de lluvias',
@@ -52,13 +105,13 @@ export const blogPosts = [
         <li>Sella grietas en muros y pisos y alrededor de tuberías.</li>
         <li>Guarda alimentos en recipientes cerrados y saca la basura diario.</li>
         <li>Vacía cualquier recipiente con agua estancada.</li>
-        <li>Agenda una fumigación preventiva antes o al inicio de la temporada.</li>
+        <li>Agenda un servicio preventivo antes o al inicio de la temporada.</li>
       </ul>
     `,
   },
   {
     slug: 'senales-de-que-tienes-roedores',
-    image: '/assets/img/post_3.jpg',
+    image: '/assets/img/bio/estacion-cebadera.jpg',
     date: '07 Oct 2026',
     category: 'Plagas comunes',
     title: 'Señales de que tienes ratas o ratones en casa',
@@ -81,12 +134,12 @@ export const blogPosts = [
   },
   {
     slug: 'control-de-plagas-en-negocios-y-bodegas',
-    image: '/assets/img/post_1.jpg',
+    image: '/assets/img/bio/restaurante.jpg',
     date: '30 Sep 2026',
     category: 'Negocios',
     title: 'Control de plagas en negocios y bodegas: qué debes saber',
     excerpt:
-      'Restaurantes, locales y bodegas necesitan un programa constante, no una fumigación aislada. Te explicamos por qué y qué pedirle a la empresa que contrates.',
+      'Restaurantes, locales y bodegas necesitan un programa constante, no un servicio aislado. Te explicamos por qué y qué pedirle a la empresa que contrates.',
     body: `
       <p>En un negocio una plaga no solo es una molestia: puede contaminar alimentos o mercancía, dañar tu reputación y causar problemas en una revisión sanitaria. Por eso conviene trabajar con un programa de control y no esperar a que aparezca el problema.</p>
       <h3>¿Por qué un programa periódico?</h3>
@@ -113,6 +166,6 @@ export const getPost = (slug) => blogPosts.find((p) => p.slug === slug);
 export const postUrl = (post) => `/blog/${post.slug}`;
 
 export const blogSidebar = {
-  categories: ['Prevención', 'Temporada de lluvias', 'Plagas comunes', 'Negocios'],
-  tags: ['Cucarachas', 'Ratas', 'Ratones', 'Mosquitos', 'Chinches', 'Hormigas', 'Alacranes', 'Sanitización'],
+  categories: ['Manejo integrado', 'Prevención', 'Temporada de lluvias', 'Plagas comunes', 'Negocios'],
+  tags: ['Cucarachas', 'Chinches', 'Termitas', 'Carcoma', 'Ratas', 'Ratones', 'Pulgas', 'Desinfección'],
 };

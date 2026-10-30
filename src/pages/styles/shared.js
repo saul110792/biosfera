@@ -11,7 +11,7 @@ export const proposalContent = {
   business,
   whatsapp: whatsappLink(),
   zones: [...serviceZones.cdmx, ...serviceZones.edomex],
-  pests: ['Cucarachas', 'Ratas y ratones', 'Mosquitos', 'Chinches', 'Hormigas', 'Pulgas', 'Alacranes', 'Arañas', 'Garrapatas'],
+  pests: ['Cucarachas', 'Chinches', 'Termitas', 'Carcoma', 'Ratas y ratones', 'Pulgas', 'Garrapatas', 'Moscas'],
   steps: homeData.howItWorks.steps.map((step) => {
     const [number, title] = step.title.split(' | ');
     return { number, title, description: step.description };

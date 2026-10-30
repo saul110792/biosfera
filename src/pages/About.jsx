@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
-import { aboutData } from '../data/pages';
-import { serviceZones } from '../data/business';
+import { aboutData, methodData } from '../data/pages';
 import usePageTitle from '../hooks/usePageTitle';
 import PageHeading from '../components/PageHeading';
 import DreamCard from '../components/DreamCard';
-import Gallery from '../components/Gallery';
+import { FaIcon } from '../components/Icons';
 import { ImageBlock } from '../components/VideoPopup';
 import ValuesCard from '../components/sections/ValuesCard';
 import Features from '../components/sections/Features';
-import ZonesSection from '../components/sections/ZonesSection';
+
+const identityIcons = ['heart', 'layers', 'circles'];
 
 function AboutIntro({ data }) {
   return (
@@ -52,21 +52,26 @@ function AboutIntro({ data }) {
   );
 }
 
-function GallerySection({ data }) {
+// Misión, visión y valores en tres columnas
+function Identity({ items }) {
   return (
-    <section>
+    <section className="cs_gray_bg">
       <div className="cs_height_100 cs_height_lg_70"></div>
       <div className="container">
-        <div className="row align-items-end cs_gap_y_50">
-          <div className="col-xl-3">
-            <div className="cs_section_heading cs_style_5">
-              <h3 className="cs_brackets_title cs_normal cs_fs_16" dangerouslySetInnerHTML={{ __html: data.subtitle }} />
-              <h2 className="cs_section_title cs_fs_80 mb-0" dangerouslySetInnerHTML={{ __html: data.title }} />
+        <div className="row cs_gap_y_40">
+          {items.map((item, index) => (
+            <div className="col-lg-4" key={item.title}>
+              <div className="cs_iconbox cs_style_1">
+                <div className="cs_iconbox_icon cs_center cs_mb_24">
+                  <i className="d-flex">
+                    <FaIcon name={identityIcons[index]} />
+                  </i>
+                </div>
+                <h3 className="cs_fs_24 cs_mb_12">{item.title}</h3>
+                <p className="mb-0 cs_fs_20">{item.text}</p>
+              </div>
             </div>
-          </div>
-          <div className="col-xl-9">
-            <Gallery items={data.items} />
-          </div>
+          ))}
         </div>
       </div>
       <div className="cs_height_100 cs_height_lg_70"></div>
@@ -81,12 +86,12 @@ export default function About() {
     <>
       <PageHeading data={aboutData.heading} />
       <AboutIntro data={aboutData.intro} />
+      <Identity items={aboutData.identity} />
       <div className="cs_heading_bg cs_white_color">
         <ValuesCard data={aboutData.coverage} />
-        <Features data={aboutData.features} />
+        <Features data={methodData} />
       </div>
-      <ZonesSection zones={serviceZones} />
-      <GallerySection data={aboutData.gallery} />
+      <div className="cs_height_100 cs_height_lg_70"></div>
       <DreamCard />
     </>
   );
