@@ -14,6 +14,8 @@ import BlogDetail from './pages/BlogDetail';
 import Contact from './pages/Contact';
 import Faq from './pages/Faq';
 import NotFound from './pages/NotFound';
+import ComingSoon from './pages/ComingSoon';
+import { siteConfig } from './data/site';
 import HomeStyle2 from './pages/styles/HomeStyle2';
 import HomeStyle3 from './pages/styles/HomeStyle3';
 
@@ -31,8 +33,10 @@ export default function App() {
 
   return (
     <Routes>
+      {/* Con siteConfig.comingSoon activo, la principal muestra el aviso y el inicio queda en la ruta de vista previa */}
+      {siteConfig.comingSoon && <Route index element={<ComingSoon />} />}
       <Route element={<MainLayout />}>
-        <Route index element={<Home />} />
+        <Route path={siteConfig.comingSoon ? siteConfig.previewPath : '/'} element={<Home />} />
         <Route path="/servicios" element={<Services />} />
       </Route>
       <Route element={<MainLayout footerVariant="cs_color_1" />}>

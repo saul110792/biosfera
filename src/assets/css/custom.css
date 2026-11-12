@@ -1,5 +1,128 @@
 /* Estilos propios de Biosfera que no existen en la plantilla original */
 
+/* Aviso de próxima apertura (pantalla completa) */
+.bio_soon {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px 20px calc(20px + env(safe-area-inset-bottom, 0px));
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+}
+
+.bio_soon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgb(24 33 23 / 72%) 0%, rgb(24 33 23 / 60%) 50%, rgb(24 33 23 / 85%) 100%);
+}
+
+.bio_soon_in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 760px;
+  margin: auto;
+}
+
+.bio_soon_eyebrow {
+  margin: 28px 0 16px;
+  padding: 6px 18px;
+  border: 1px solid rgb(255 255 255 / 50%);
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.bio_soon_title {
+  margin: 0 0 24px;
+  color: #fff;
+  font-family: var(--heading-font);
+  font-size: clamp(36px, 7vw, 80px);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.bio_soon_title span {
+  display: block;
+  color: var(--gray-color);
+  opacity: 0.85;
+}
+
+.bio_soon_text {
+  max-width: 600px;
+  margin: 0 0 12px;
+  color: rgb(255 255 255 / 85%);
+  font-size: 19px;
+}
+
+.bio_soon_actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px 28px;
+  margin-top: 28px;
+}
+
+.bio_soon_phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.bio_soon_phone:hover {
+  color: var(--gray-color);
+}
+
+.bio_soon_social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 24px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+}
+
+.bio_soon_social a {
+  color: rgb(255 255 255 / 80%);
+}
+
+.bio_soon_social a:hover {
+  color: #fff;
+}
+
+.bio_soon_copy {
+  margin: 24px 0 0;
+  color: rgb(255 255 255 / 60%);
+  font-size: 13px;
+}
+
+@media (max-width: 575px) {
+  .bio_soon_text {
+    font-size: 17px;
+  }
+
+  .bio_soon_eyebrow {
+    margin-top: 32px;
+  }
+}
+
 /* Logo provisional: hoja del favicon (como máscara, toma el color del texto) + nombre */
 .bio_logo {
   display: inline-flex;
